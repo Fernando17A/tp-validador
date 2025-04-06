@@ -3,6 +3,7 @@
 Alumno -->"*" Materia
 Inscripcion -->"*" Materia
 Inscripcion --> Alumno
+Materia -->"*" Materia
 
 class Alumno{
     - nombre: String
@@ -10,7 +11,7 @@ class Alumno{
     - cursadas: List<Materia>
 
     + puedeCursar(materia: Materia): Bool
-    + agregarMateriasCursadas(): void
+    + agregarMateriasCursadas(materia: Materia): void
 }
 
 class Materia{
